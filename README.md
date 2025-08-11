@@ -60,5 +60,5 @@ Pattern-Only Strategy
 
 CAGR: Negative
 
-Max Drawdown: Over 90%
+
 
