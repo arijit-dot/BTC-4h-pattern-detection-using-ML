@@ -60,5 +60,15 @@ Pattern-Only Strategy
 
 CAGR: Negative
 
+ Key Results vs. Baseline (No ML):
+
+Sharpe ratio ↑ 0.27 → 3.8
+
+CAGR ↑ -18.4% → +13.7%
+
+Max drawdown ↓ -93.9% → -3.8%
+
+Win rate: 67% (ML) vs. 52% (heuristic)
+
 
 
