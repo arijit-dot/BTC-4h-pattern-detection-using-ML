@@ -68,6 +68,6 @@ CAGR	-18.4%	+13.7%
 Sharpe	0.27 (noise-like)	3.8 (professional-grade)
 Max DD	-93.9% (near-total wipeout)	-3.8% (low risk)
 
-
+![Equity Curve](images/equity_curve.png) 
 
 
