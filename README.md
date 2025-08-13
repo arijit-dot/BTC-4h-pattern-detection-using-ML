@@ -60,15 +60,14 @@ Pattern-Only Strategy
 
 CAGR: Negative
 
- Key Results vs. Baseline (No ML):
+2. Performance Comparison Methodology
+Baseline vs. ML-Augmented:
+Metric	Raw Patterns (No ML)	ML Filtered (Prob > 0.6)
+Total Return	0.1994 (80% loss)	1.1349 (13.5% gain)
+CAGR	-18.4%	+13.7%
+Sharpe	0.27 (noise-like)	3.8 (professional-grade)
+Max DD	-93.9% (near-total wipeout)	-3.8% (low risk)
 
-Sharpe ratio ↑ 0.27 → 3.8
-
-CAGR ↑ -18.4% → +13.7%
-
-Max drawdown ↓ -93.9% → -3.8%
-
-Win rate: 67% (ML) vs. 52% (heuristic)
 
 
 
