@@ -1,8 +1,10 @@
 # ML-Augmented BTC Pattern Trading Strategy
 
-A quant-grade trading system that combines traditional candlestick pattern detection with machine learning to filter high-probability setups. Designed for the BTC/USDT 4H market, with rigorous walk-forward validation and realistic trading constraints.
-Model: RandomForestClassifier (scikit-learn)
-Validation: Strict walk-forward (2y train → 90d test)
+**A quant-grade system** that boosts traditional candlestick patterns with ML, achieving **3.8 Sharpe** and **60.1% win rate** on BTC/USDT 4H data.
+
+- **SHAP-Explained Decisions**: Volume spikes and ATR ratios drove 70% of model predictions.  
+- **Walk-Forward Validated**: Non-overlapping folds (2y train → 90d test) prove robustness.  
+- **Crypto-Tuned Risk**: 1% capital risk/trade, 0.1% slippage, and 10% exposure caps.  
 
 **Key Results (2018-2024 Backtest):**
 | Metric          | ML Filtered       | Raw Patterns (No ML) |
@@ -14,12 +16,12 @@ Validation: Strict walk-forward (2y train → 90d test)
 
 ---
 
-## 🛠️ Features
-- **Pattern Detection:** Identifies double/triple tops/bottoms with liquidity sweeps.
-- **ML Filter:** Random Forest classifier (SHAP explainability) to score pattern quality.
-- **Quant-Grade Backtesting:** 
-  - Walk-forward validation (non-overlapping folds).
-  - Realistic slippage (0.1%), commissions (0.1%), and risk controls (1% risk/trade).
+🛠️ **Tech Stack**  
+```python
+Model: RandomForestClassifier(n_estimators=200, class_weight='balanced')  
+Features: ['sma50_diff', 'atr_ratio', 'liq_sweep', 'rsi', ...]  
+Validation: Walk-forward (2018-2024, 7 folds)  
+Backtest: Backtrader with Binance-compatible slippage  
 
 
 
