@@ -10,7 +10,7 @@ A quant-grade trading system that combines traditional candlestick pattern detec
 | **Max DD**      | -3.8%            | -93.9%               |
 | **Win Rate**    | 60.1%            | 52.0%                |
 
-![Equity Curve](images/equity curve.png) *(Example plot - replace with your results)*
+![Equity Curve](plot images/equity curve.png) *(Example plot - replace with your results)*
 
 ---
 
