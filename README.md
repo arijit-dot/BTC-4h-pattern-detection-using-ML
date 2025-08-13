@@ -1,65 +1,28 @@
-# BTC-4h-pattern-detection-using-ML
-This project implements a quantitative trading pipeline for BTC/USDT using pattern detection, machine learning filtering, and backtesting. It detects Double Bottom, Double Top, Triple Bottom, and Triple Top patterns, confirmed by liquidity sweeps, then applies Machine Learning to filter low-probability trades.
-🔍 Features
-Pattern Detection
+# ML-Augmented BTC Pattern Trading Strategy
 
-Double Bottom & Double Top
+A quant-grade trading system that combines traditional candlestick pattern detection with machine learning to filter high-probability setups. Designed for the BTC/USDT 4H market, with rigorous walk-forward validation and realistic trading constraints.
 
-Triple Bottom & Triple Top
+**Key Results (2018-2024 Backtest):**
+| Metric          | ML Filtered       | Raw Patterns (No ML) |
+|-----------------|------------------|----------------------|
+| **CAGR**        | 13.7%            | -18.4%               |
+| **Sharpe**      | 3.8              | 0.27                 |
+| **Max DD**      | -3.8%            | -93.9%               |
+| **Win Rate**    | 60.1%            | 52.0%                |
 
-Liquidity sweep detection for entry confirmation
+![Equity Curve](images/equity curve.png) *(Example plot - replace with your results)*
 
-Trend Filtering
+---
 
-Daily uptrend/downtrend confirmation using moving averages
+## 🛠️ Features
+- **Pattern Detection:** Identifies double/triple tops/bottoms with liquidity sweeps.
+- **ML Filter:** Random Forest classifier (SHAP explainability) to score pattern quality.
+- **Quant-Grade Backtesting:** 
+  - Walk-forward validation (non-overlapping folds).
+  - Realistic slippage (0.1%), commissions (0.1%), and risk controls (1% risk/trade).
 
-ML Filtering
 
-Uses Random Forest to predict the probability of a profitable trade
-
-Features include SMA differences, RSI, ATR ratio, MACD-like metrics, ADX proxy, and volume ratios
-
-Backtesting
-
-Walk-forward validation to avoid lookahead bias
-
-Position sizing and exposure control
-
-Performance metrics: Total Return, CAGR, Win Rate, Sharpe Ratio, Max Drawdown
-
-Comparison between ML-filtered strategy and pure pattern-based strategy
-
-📂 Dataset
-Source: Binance BTCUSDT 4H OHLCV data (Binance_BTCUSDT_4h_from_1h.csv)
-
-Columns: date, open, high, low, close, volume_btc, tradecount
-
-🚀 How It Works
-Data Preparation – Calculates trend indicators and normalizes features
-
-Pattern Detection – Finds reversal patterns & liquidity sweeps
-
-Feature Engineering – Creates technical features for ML model
-
-ML Filtering – Predicts success probability of patterns
-
-Backtest – Runs trades with ML-filtered signals and records performance
-
-📊 Example Results
-ML-Filtered Strategy
-
-CAGR: ~13.7%
-
-Win Rate: ~60%
-
-Max Drawdown: ~3.8%
-
-Sharpe Ratio: ~3.80
-
-Pattern-Only Strategy
-
-CAGR: Negative
-
+--
 2. Performance Comparison Methodology
 Baseline vs. ML-Augmented:
 Metric	Raw Patterns (No ML)	ML Filtered (Prob > 0.6)
